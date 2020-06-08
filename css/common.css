@@ -212,6 +212,8 @@ footer .title {
   margin-bottom: 21px;
 }
 b {
+  display: block;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
 }
@@ -219,6 +221,7 @@ b {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+
   padding-top: 48px;
   padding-bottom: 0px;
 }
@@ -240,7 +243,7 @@ footer .logo {
 }
 .footer-contacts {
   margin-bottom: 28px;
-  margin-right: 179px;
+  margin-right: 69px;
 }
 
 .adress-contacts > .item {
@@ -285,15 +288,40 @@ footer .logo {
 .subscribe {
   margin-left: auto;
 }
-.subscribe > .link-button {
+.footer-form > .link-button {
   display: flex;
   align-items: center;
 }
-
 .subscribe-icon {
   display: inline-block;
   margin-left: 10px;
 }
+.footer-form {
+  display: flex;
+  width: 570px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-form input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.footer-form input::placeholder {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 1.87;
+  color: rgba(255, 255, 255, 0.6);
+
+  background: #2f303a;
+}
+
 /*Footer copyright*/
 .text-copyright {
   padding-top: 18px;

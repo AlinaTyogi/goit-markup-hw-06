@@ -65,32 +65,34 @@
           >Заказать услугу</button>
         <div class="backdrop is-hidden" data-backdrop>
           <div class="modal">
+            <form class="modal-form">
             <b class="modal-title">
               Оставьте свои данные, мы вам перезвоним
             </b>
-            <form>
-              <ul class="modal-list-form">
-                <li class="modal-field-item">
-                  <input class="textfield" type="text" name="name" placeholder="Имя" />
-                </li>
-                <li class="modal-field-item">
-                  <input class="textfield" type="text" name="telephone" placeholder="Телефон" />
-                </li>
-                <li class="modal-field-item">
-                  <input class="textfield" type="text" name="email" placeholder="Почта" />
-                </li>
-              </ul> 
-              <textarea class="textfield" type="text" name="comment" rows="5" cols="45" placeholder="Комментарий"></textarea>
-             
-              <div class="checkbox-container">
-                <input type="checkbox" name="agreement" class="modal-checkbox" id="agreement">
-                <label for="agreement" class="modal-consent">
-                  Согласен с рассылкой и принимаю <a class="modal-link-consent" href="#">Условия договора</a>
-                </label>
-              </div>
-              <button class="link-button" type="submit" href="#" target="_blank">Отправить</button>
+            <ul class="modal-list-form">
+              <li class="modal-field-item">
+                <label for="name">Имя</label>
+                <input class="textfield" type="text" name="name" id="name" placeholder="Имя" />
+              </li>
+              <li class="modal-field-item">
+                <label for="tel">Телефон</label>
+                <input class="textfield" type="tel" name="tel" id="tel" placeholder="Телефон" />
+              </li>
+              <li class="modal-field-item">
+                <label for="mail">Почта</label>
+                <input class="textfield" type="email" name="mail" id="mail" placeholder="Почта" />
+              </li>
+            </ul> 
+            <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Комментарий"></textarea>
+            <div class="checkbox-container">
+              <input class="modal-checkbox" type="checkbox" name="policy" id="policy">
+              <label for="policy" class="modal-consent">
+                Согласен с рассылкой и принимаю <a class="modal-link-consent" href="#">Условия договора</a>
+              </label>
+            </div>
+              <button class="link-button" type="submit">Отправить</button>
               <button class="modal-close" data-close-modal></button>
-            </form>
+          </form>
           </div>
         <div/>
       </section>
@@ -625,14 +627,23 @@
         </div>
         <!--Форма подписки-->
         <div class="subscribe">
+          
           <h2 class="is-hidden">Форма подписки</h2>
-          <h3 class="title"><b>Подпишитесь на рассылку</b></h3>
-          <a class="link-button" href="#"
-            >Подписаться
-            <svg class="subscribe-icon" width="24" height="24">
-              <use href="./images/sprite.svg#icon-send"></use>
-            </svg>
-          </a>
+          <h3><b>Подпишитесь на рассылку</b></h3>
+
+          <form class="modal-form" >
+            <div class="footer-form">
+              <label for="mail"></label>
+              <input type="email" name="mail" id="mail" placeholder="E-mail" />
+              <button class="link-button" type="submit">Подписаться
+                <svg class="subscribe-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+          
+
         </div>
       </div>
       <p class="text-copyright container">
@@ -658,6 +669,19 @@
       function logBackdropClick() {
         console.log('Это клик в бекдроп');
       }
+       (() => {
+          document
+            .querySelector('.modal-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+
+              e.currentTarget.reset();
+            });
+        })();
     </script>
   </body>
 </html>
