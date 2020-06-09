@@ -63,12 +63,13 @@
         <h1>эффективные решения для вашего бизнеса</h1>
         <button class="link-button" data-open-modal
           >Заказать услугу</button>
-        <div class="backdrop is-hidden" data-backdrop>
+        <div class="backdrop hidden" data-backdrop>
           <div class="modal">
-            <form class="modal-form">
+            <button class="modal-close" data-close-modal></button>
             <b class="modal-title">
               Оставьте свои данные, мы вам перезвоним
             </b>
+            <form class="modal-form">
             <ul class="modal-list-form">
               <li class="modal-field-item">
                 <label for="name">Имя</label>
@@ -90,9 +91,9 @@
                 Согласен с рассылкой и принимаю <a class="modal-link-consent" href="#">Условия договора</a>
               </label>
             </div>
-              <button class="link-button" type="submit">Отправить</button>
-              <button class="modal-close" data-close-modal></button>
-          </form>
+            <button class="link-button" type="submit">Отправить</button>
+              
+            </form>
           </div>
         <div/>
       </section>
@@ -663,7 +664,7 @@
       refs.backdrop.addEventListener('click', logBackdropClick);
 
       function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
+        refs.backdrop.classList.toggle('hidden');
       }
 
       function logBackdropClick() {
