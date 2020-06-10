@@ -61,11 +61,12 @@
       <!-- Герой -->
       <section class="hero">
         <h1>эффективные решения для вашего бизнеса</h1>
-        <button class="link-button" data-open-modal
+        <button class="link-button" data-modal-open
           >Заказать услугу</button>
-        <div class="backdrop hidden" data-backdrop>
+        <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <button class="modal-close" data-close-modal></button>
+            <button class="modal-close" data-modal-close>
+            </button>
             <b class="modal-title">
               Оставьте свои данные, мы вам перезвоним
             </b>
@@ -73,18 +74,22 @@
             <ul class="modal-list-form">
               <li class="modal-field-item">
                 <label for="name">Имя</label>
-                <input class="textfield" type="text" name="name" id="name" placeholder="Имя" />
+                <input class="textfield" type="text" name="name" id="name" placeholder="Иванов Иван" autofocus/>
               </li>
               <li class="modal-field-item">
                 <label for="tel">Телефон</label>
-                <input class="textfield" type="tel" name="tel" id="tel" placeholder="Телефон" />
+                <input class="textfield" type="tel" name="tel" id="tel" placeholder="+380 12 3456789" />
               </li>
               <li class="modal-field-item">
                 <label for="mail">Почта</label>
-                <input class="textfield" type="email" name="mail" id="mail" placeholder="Почта" />
+                <input class="textfield" type="email" name="mail" id="mail" placeholder="name@mail.com" />
+              </li>
+              <li class="modal-field-item">
+                <label for="comment">Комментарий</label>
+                <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Похвали нас"></textarea>
               </li>
             </ul> 
-            <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Комментарий"></textarea>
+            
             <div class="checkbox-container">
               <input class="modal-checkbox" type="checkbox" name="policy" id="policy">
               <label for="policy" class="modal-consent">
@@ -101,7 +106,7 @@
       <!--Преимущества студии-->
       <section class="benefits">
         <div class="container">
-          <h2 class="is-hidden">Наши преимущества</h2>
+          <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="benefits-list">
             <li class="item">
               <svg class="benefit-icon" width="70" height="70">
@@ -212,7 +217,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-instagram"></use>
                     </svg>
-                    <span class="is-hidden">Instagram</span>
+                    <span class="visually-hidden">Instagram</span>
                   </a>
                 </li>
                 <li class="socials-item">
@@ -225,7 +230,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-twitter"></use>
                     </svg>
-                    <span class="is-hidden">Twitter</span></a
+                    <span class="visually-hidden">Twitter</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -238,7 +243,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-facebook"></use>
                     </svg>
-                    <span class="is-hidden">Facebook</span></a
+                    <span class="visually-hidden">Facebook</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -251,7 +256,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-linkedin"></use>
                     </svg>
-                    <span class="is-hidden">LinkedIn</span></a
+                    <span class="visually-hidden">LinkedIn</span></a
                   >
                 </li>
               </ul>
@@ -277,7 +282,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-instagram"></use>
                     </svg>
-                    <span class="is-hidden">Instagram</span>
+                    <span class="visually-hidden">Instagram</span>
                   </a>
                 </li>
                 <li class="socials-item">
@@ -290,7 +295,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-twitter"></use>
                     </svg>
-                    <span class="is-hidden">Twitter</span></a
+                    <span class="visually-hidden">Twitter</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -303,7 +308,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-facebook"></use>
                     </svg>
-                    <span class="is-hidden">Facebook</span></a
+                    <span class="visually-hidden">Facebook</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -316,7 +321,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-linkedin"></use>
                     </svg>
-                    <span class="is-hidden">LinkedIn</span></a
+                    <span class="visually-hidden">LinkedIn</span></a
                   >
                 </li>
               </ul>
@@ -342,7 +347,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-instagram"></use>
                     </svg>
-                    <span class="is-hidden">Instagram</span>
+                    <span class="visually-hidden">Instagram</span>
                   </a>
                 </li>
                 <li class="socials-item">
@@ -355,7 +360,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-twitter"></use>
                     </svg>
-                    <span class="is-hidden">Twitter</span></a
+                    <span class="visually-hidden">Twitter</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -368,7 +373,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-facebook"></use>
                     </svg>
-                    <span class="is-hidden">Facebook</span></a
+                    <span class="visually-hidden">Facebook</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -381,7 +386,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-linkedin"></use>
                     </svg>
-                    <span class="is-hidden">LinkedIn</span></a
+                    <span class="visually-hidden">LinkedIn</span></a
                   >
                 </li>
               </ul>
@@ -407,7 +412,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-instagram"></use>
                     </svg>
-                    <span class="is-hidden">Instagram</span>
+                    <span class="visually-hidden">Instagram</span>
                   </a>
                 </li>
                 <li class="socials-item">
@@ -420,7 +425,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-twitter"></use>
                     </svg>
-                    <span class="is-hidden">Twitter</span></a
+                    <span class="visually-hidden">Twitter</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -433,7 +438,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-facebook"></use>
                     </svg>
-                    <span class="is-hidden">Facebook</span></a
+                    <span class="visually-hidden">Facebook</span></a
                   >
                 </li>
                 <li class="socials-item">
@@ -446,7 +451,7 @@
                     <svg class="socials-icon" width="20" height="20">
                       <use href="./images/sprite.svg#icon-linkedin"></use>
                     </svg>
-                    <span class="is-hidden">LinkedIn</span></a
+                    <span class="visually-hidden">LinkedIn</span></a
                   >
                 </li>
               </ul>
@@ -543,7 +548,7 @@
       <!--Контакты-->
       <div class="container footer-flex">
         <div class="footer-contacts">
-          <h2 class="is-hidden">Контакты студии</h2>
+          <h2 class="visually-hidden">Контакты студии</h2>
           <a class="logo" href="./index.html"> <span>Web</span> Studio </a>
           <address class="adress-location">
             г. Киев, пр-т Леси Украинки, 26
@@ -558,7 +563,7 @@
         </div>
         <!--Социальные сети-->
         <div class="socials">
-          <h2 class="is-hidden">Ссылки на социальные сети студии</h2>
+          <h2 class="visually-hidden">Ссылки на социальные сети студии</h2>
           <h3 class="title"><b>присоединяйтесь</b></h3>
           <ul class="socials-list">
             <li class="socials-item">
@@ -571,7 +576,7 @@
                 <svg class="socials-icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
-                <span class="is-hidden">
+                <span class="visually-hidden">
                   Инстаграм
                 </span>
               </a>
@@ -586,7 +591,7 @@
                 <svg class="socials-icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
-                <span class="is-hidden">
+                <span class="visually-hidden">
                   Твиттер
                 </span>
               </a>
@@ -601,7 +606,7 @@
                 <svg class="socials-icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
-                <span class="is-hidden">
+                <span class="visually-hidden">
                   Фейсбук
                 </span>
               </a>
@@ -616,7 +621,7 @@
                 <svg class="socials-icon" width="20" height="20">
                   <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
-                <span class="is-hidden">
+                <span class="visually-hidden">
                   ЛинкедИн
                   <svg class="socials-icon" width="20" height="20">
                     <use href="./images/sprite.svg#icon-instagram"></use>
@@ -629,7 +634,7 @@
         <!--Форма подписки-->
         <div class="subscribe">
           
-          <h2 class="is-hidden">Форма подписки</h2>
+          <h2 class="visually-hidden">Форма подписки</h2>
           <h3><b>Подпишитесь на рассылку</b></h3>
 
           <form class="modal-form" >
@@ -643,7 +648,6 @@
               </button>
             </div>
           </form>
-          
 
         </div>
       </div>
@@ -651,38 +655,6 @@
         2020 | Developed by GoIT Students
       </p>
     </footer>
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      refs.backdrop.addEventListener('click', logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('hidden');
-      }
-
-      function logBackdropClick() {
-        console.log('Это клик в бекдроп');
-      }
-       (() => {
-          document
-            .querySelector('.modal-form')
-            .addEventListener('submit', e => {
-              e.preventDefault();
-
-              new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`),
-              );
-
-              e.currentTarget.reset();
-            });
-        })();
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

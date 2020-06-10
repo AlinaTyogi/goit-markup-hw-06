@@ -44,7 +44,7 @@ h3 {
   font-weight: 700;
   font-size: 14px;
 }
-.is-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
