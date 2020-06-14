@@ -70,7 +70,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-a:focus,
+/* a:focus,
 .button:focus,
 .button.alt:focus,
 button:focus,
@@ -78,7 +78,7 @@ input[type='button']:focus,
 input[type='reset']:focus,
 input[type='submit']:focus {
   outline: none;
-}
+} */
 
 /*Стили для header*/
 .header-flex {
@@ -186,6 +186,7 @@ input[type='submit']:focus {
   display: inline-block;
   border: 1px solid transparent;
   padding: 10px 32px;
+  min-width: 200px;
   min-height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
