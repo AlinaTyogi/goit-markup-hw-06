@@ -323,8 +323,8 @@
 }
 
 .comment:focus + .comment-label,
-.comment:not(:placeholder-shown) + .form-label {
-  transform: translateY(-30px) scale(0.86);
+.comment:not(:placeholder-shown) + .comment-label {
+  transform: translate(-8px, -30px) scale(0.86);
   color: var(--primary-hover-color);
   /* font-size: 12px;
   line-height: 1.17; */
@@ -371,7 +371,6 @@
   line-height: 1.71;
 
   color: var(--primary-text-color);
-  
 }
 
 .modal-checkbox {
@@ -427,6 +426,8 @@
 
   border-radius: 50%;
   border: none;
+  outline: none;
+
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   transform: scale(1);

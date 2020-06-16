@@ -314,11 +314,15 @@ footer .logo {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  outline: none;
 
   padding: 12px 16px;
   font-size: 16px;
   line-height: 1.87;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form input[type='email'] {
 }
 
 /*Footer copyright*/
