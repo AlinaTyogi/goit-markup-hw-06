@@ -194,6 +194,7 @@ input[type='submit']:focus {
 
   color: var(--primary-background-color);
   background-color: var(--primary-hover-color);
+  outline: none;
 
   font-weight: 700;
   font-size: 16px;
@@ -201,6 +202,10 @@ input[type='submit']:focus {
   text-decoration: none;
   text-align: center;
   letter-spacing: 0.06em;
+}
+.link-button:focus,
+.link-button:active {
+  border: 0.5px groove var(--secondary-background-color);
 }
 
 /*Стили для footer*/
@@ -320,9 +325,6 @@ footer .logo {
   font-size: 16px;
   line-height: 1.87;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-form input[type='email'] {
 }
 
 /*Footer copyright*/
